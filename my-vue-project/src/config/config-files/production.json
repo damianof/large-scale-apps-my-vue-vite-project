@@ -1,0 +1,42 @@
+{
+  "global": {
+    "version": 0.1
+  },
+  
+  "httpClient": {
+    "tokenKey": "myvue3app-token",
+    "clientType": "fetch"
+  },
+  
+  "apiClient": {
+    "type": "live"
+  },
+
+  "items": {
+    "apiClientOptions": {
+      "endpoints": {
+        "fetchItems": "/path/to/your/real/PRODUCTION/api/and-point"
+      },
+      "mockDelay": 0
+    }
+  },
+
+  "localization": {
+    "apiClientOptions": {
+      "endpoints": {
+        "fetchTranslation": "path/to/your/real/PRODUCTION/api/and-point"
+      },
+      "mockDelay": 0
+    },
+    "locales": [
+      { "key": "en-US", "isDefault": true },
+      { "key": "it-IT", "isDefault": false },
+      { "key": "fr-FR", "isDefault": false },
+      { "key": "es-ES", "isDefault": false }
+    ],
+    "localStorageCache": { 
+      "enabled": true, 
+      "expirationInMinutes": 60
+    }
+  }
+}

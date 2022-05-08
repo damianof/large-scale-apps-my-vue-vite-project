@@ -1,0 +1,52 @@
+{
+  "name": "my-vue-project",
+  "author": "Damiano Fusco",
+  "license": "MIT",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vite --config vite.config.mock.ts --mode mock",
+    "build": "vue-tsc --noEmit && vite build --config vite.config.production.ts --mode production",
+    "build-mock": "vite build --config vite.config.mock.ts --mode mock",
+    "build-beta": "vite build --config vite.config.production.ts --mode beta",
+    "preview": "vite preview --config vite.config.mock.ts --mode mock",
+    "with-jsonserver": "vite --config vite.config.jsonserver.ts --mode jsonserver",
+    "json-server-api": "json-server --port 3111 --watch json-server/db.json",
+    "test": "vitest run --config vite.config.mock.ts --mode mock",
+    "test-watch": "vitest watch --config vite.config.mock.ts --mode mock",
+    "test-coverage": "vitest run --coverage --config vite.config.mock.ts --mode mock",
+    "pretty": "prettier -w \"./src/**/*.*{ts,vue,svelte,tsx,css,scss,html}\"",
+    "check": "npm run pretty; npm run test; npm run build-mock"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged \"./src/**/*.*{ts,vue,svelte,tsx,css,scss,html}\""
+    }
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@builtwithjavascript/formatters": "^1.0.5",
+    "@testing-library/user-event": "^14.1.1",
+    "@testing-library/vue": "^6.5.1",
+    "@types/node": "^17.0.31",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "autoprefixer": "^10.4.7",
+    "axios": "^0.27.2",
+    "husky": "^7.0.4",
+    "i18next": "^21.7.1",
+    "jsdom": "^19.0.0",
+    "json-server": "^0.17.0",
+    "postcss": "^8.4.13",
+    "prettier": "^2.6.2",
+    "pretty-quick": "^3.1.3",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.7",
+    "vitest": "^0.10.2",
+    "vue-i18n": "^9.1.10",
+    "vue-tsc": "^0.34.7"
+  }
+}

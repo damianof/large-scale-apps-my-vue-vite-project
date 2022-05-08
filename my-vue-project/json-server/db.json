@@ -1,0 +1,31 @@
+{
+  
+  "items": [
+    {
+      "id": 1,
+      "name": "Item 1 from json-server",
+      "selected": false
+    },
+    {
+      "id": 2,
+      "name": "Item 2 from json-server",
+      "selected": false
+    },
+    {
+      "id": 3,
+      "name": "Item 3 from json-server",
+      "selected": false
+    },
+    {
+      "id": 4,
+      "name": "Item 4 from json-server",
+      "selected": false
+    },
+    {
+      "id": 5,
+      "name": "Item 5 from json-server",
+      "selected": false
+    }
+  ]
+  
+}

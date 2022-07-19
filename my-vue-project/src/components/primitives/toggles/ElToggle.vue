@@ -3,7 +3,7 @@
 
   interface Props {
     testid?: string
-    id: string
+    id?: string
     disabled?: boolean
     checked: boolean
     addCss?: string

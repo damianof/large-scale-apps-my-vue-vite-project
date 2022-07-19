@@ -4,7 +4,7 @@
   interface Props {
     tag: string
     text: string
-    addCss: string
+    addCss?: string
   }
 
   const props = withDefaults(defineProps<Props>(), {

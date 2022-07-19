@@ -1,6 +1,6 @@
 // file: src/api-client/models/items/ItemsApiClient.model.ts
 
-import { httpClient, HttpRequestParamsInterface, HttpRequestType } from '@/http-client'
+import { useHttpClient, HttpRequestParamsInterface, HttpRequestType } from '@/http-client'
 
 import { ItemsApiClientOptions, ItemsApiClientEndpoints } from './ItemsApiClientOptions.interface'
 import { ItemsApiClientInterface } from './ItemsApiClient.interface'
@@ -30,6 +30,6 @@ export class ItemsApiClientModel implements ItemsApiClientInterface {
       mockDelay: this.mockDelay
     }
 
-    return httpClient.request<ItemInterface[]>(requestParameters)
+    return useHttpClient().request<ItemInterface[]>(requestParameters)
   }
 }

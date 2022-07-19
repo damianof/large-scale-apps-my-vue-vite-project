@@ -1,6 +1,6 @@
 // file: src/api-client/models/localization/LocalizationApiClient.model.ts
 
-import { httpClient, HttpRequestParamsInterface, HttpRequestType } from '@/http-client'
+import { useHttpClient, HttpRequestParamsInterface, HttpRequestType } from '@/http-client'
 
 import { LocalizationApiClientOptions, LocalizationApiClientEndpoints } from './LocalizationApiClientOptions.interface'
 import { LocalizationApiClientInterface } from './LocalizationApiClient.interface'
@@ -33,6 +33,6 @@ export class LocalizationApiClientModel implements LocalizationApiClientInterfac
       mockDelay: this.mockDelay
     }
 
-    return httpClient.request<{ [key: string]: string }>(requestParameters)
+    return useHttpClient().request<{ [key: string]: string }>(requestParameters)
   }
 }

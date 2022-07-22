@@ -5,6 +5,11 @@
   import DebugFormatters from '@/components/shared/DebugFormatters.component.vue'
   import PrimitivesView from '@/views/Primitives.view.vue'
 
+  import { 
+    Counter,
+    SampleComp
+  } from 'my-component-library'
+
   // import a reference to useLocalization and useFormatters
   import { useLocalization } from '@/localization'
 
@@ -17,6 +22,10 @@
 </script>
 
 <template>
+  <div>
+    <SampleComp text="This is a sample component from my-component-library" />
+    <Counter />
+  </div>
   <div class="home m-2 p-2 border-2 border-red-500">
     <LocaleSelector />
     <h3>{{ t('home.welcome') }} [{{ currentLocale }}]</h3>

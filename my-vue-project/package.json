@@ -39,6 +39,7 @@
     "i18next": "^21.7.1",
     "jsdom": "^19.0.0",
     "json-server": "^0.17.0",
+    "my-component-library": "file:../my-component-library",
     "postcss": "^8.4.13",
     "prettier": "^2.6.2",
     "pretty-quick": "^3.1.3",

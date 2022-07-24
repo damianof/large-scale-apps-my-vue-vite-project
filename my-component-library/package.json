@@ -2,7 +2,6 @@
   "name": "my-component-library",
   "version": "0.1.2",
   "scripts": {
-    "dev": "vite",
     "clean": "rm -rf ./dist; rm -rf my-component-library-0.1.2.tgz; rm -rf ../my-component-library-0.1.2.tgz",
     "build-types": "vue-tsc --declaration --emitDeclarationOnly --outDir ./dist",
     "build-lib": "vite build",

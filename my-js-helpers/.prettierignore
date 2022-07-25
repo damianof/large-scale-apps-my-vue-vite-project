@@ -1,0 +1,7 @@
+.nyc_output/*
+coverage/*
+node_modules/*
+public/*
+dist/*
+unused-code/*
+*.d.ts

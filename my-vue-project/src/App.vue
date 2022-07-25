@@ -10,6 +10,10 @@
     SampleComp
   } from 'my-component-library'
 
+  import { 
+    randomid
+  } from 'my-js-helpers'
+
   // import a reference to useLocalization and useFormatters
   import { useLocalization } from '@/localization'
 
@@ -23,7 +27,7 @@
 
 <template>
   <div>
-    <SampleComp text="This is a sample component from my-component-library" />
+    <SampleComp :text="`This is a sample component from my-component-library: ${ randomid() }`" />
     <Counter />
   </div>
   <div class="home m-2 p-2 border-2 border-red-500">

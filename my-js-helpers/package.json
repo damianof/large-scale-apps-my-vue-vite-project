@@ -1,6 +1,6 @@
 {
   "name": "@largescaleapps/my-js-helpers",
-  "version": "0.1.2",
+  "version": "0.1.21",
   "type": "module",
   "scripts": {
     "clean": "rm -rf ./dist; rm -rf my-js-helpers-0.1.2.tgz; rm -rf ../my-js-helpers-0.1.2.tgz",

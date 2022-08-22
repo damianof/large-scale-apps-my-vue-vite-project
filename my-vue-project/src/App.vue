@@ -12,7 +12,7 @@
 
   import { 
     randomid
-  } from 'my-js-helpers'
+  } from '@largescaleapps/my-js-helpers'
 
   // import a reference to useLocalization and useFormatters
   import { useLocalization } from '@/localization'

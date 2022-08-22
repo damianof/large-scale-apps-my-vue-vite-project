@@ -1,7 +1,6 @@
 import { randomid } from '../../helpers'
 
 describe('id', () => {
-
   it('should return value with expected length', () => {
     const result = randomid()
     expect(result.length).toEqual(11)

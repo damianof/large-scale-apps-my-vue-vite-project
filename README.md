@@ -10,8 +10,10 @@ https://leanpub.com/vue-vite-typescript "Large Scale Apps with Svelte and TypeSc
 
 ### Note
 
-The folder my-vue-project contains the main project built throughout the to the new edition of the book.
+The folder `my-vue-project` contains the main project built throughout the to the new edition of the book.
 
-### Remarks
+The `steps-by-chapter` folder contains individual projects as per steps in each chapters to get you unstuck should you encounter any issues.
 
-TODO 
+The folder `my-component-library` contains the component project library as per Chapter 17 of the book.
+
+The folder `my-js-helpers` contains the helpers project library as per Chapter 18 of the book.

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [ 
+    "vite.config.jsonserver.ts", 
+    "vite.config.mock.ts", 
+    "vite.config.production.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

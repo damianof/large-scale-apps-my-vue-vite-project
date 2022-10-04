@@ -1,0 +1,30 @@
+{
+  "name": "chapter-07-api-client",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vite --mode mock",
+    "build": "vue-tsc --noEmit && vite build --mode production",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test-watch": "vitest watch",
+    "test-coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@testing-library/user-event": "^14.4.3",
+    "@testing-library/vue": "^6.6.1",
+    "@types/node": "^18.7.23",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "axios": "^1.0.0",
+    "jsdom": "^20.0.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vitest": "^0.23.4",
+    "vue-tsc": "^0.40.4"
+  }
+}

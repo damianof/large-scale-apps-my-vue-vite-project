@@ -1,0 +1,34 @@
+{
+  "name": "chapter-07-json-server",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vite --config vite.config.mock.ts --mode mock",
+    "build": "vue-tsc --noEmit && vite build --config vite.config.production.ts --mode production",
+    "build-mock": "vue-tsc --noEmit && vite build --config vite.config.mock.ts --mode mock",
+    "preview": "vite preview",
+    "with-jsonserver": "vite --config vite.config.jsonserver.ts --mode mock",
+    "json-server-api": "json-server --port 3111 --watch json-server/db.json",
+    "test": "vitest run",
+    "test-watch": "vitest watch",
+    "test-coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@testing-library/user-event": "^14.4.3",
+    "@testing-library/vue": "^6.6.1",
+    "@types/node": "^18.7.23",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "axios": "^1.0.0",
+    "jsdom": "^20.0.0",
+    "json-server": "^0.17.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vitest": "^0.23.4",
+    "vue-tsc": "^0.40.4"
+  }
+}

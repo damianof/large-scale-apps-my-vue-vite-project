@@ -10,20 +10,20 @@ export const enum HttpRequestType {
   post,
   put,
   delete,
-  patch
+  patch,
 }
 
 // http content types
 export const HttpContentTypes = Object.freeze({
-  applicationJson: 'application/json',
-  formUrlEncoded: 'application/x-www-form-urlencoded;charset=UTF-8'
-})
+  applicationJson: "application/json",
+  formUrlEncoded: "application/x-www-form-urlencoded;charset=UTF-8",
+});
 
 // constant for http request methods names
 export const HttpRequestMethods = Object.freeze({
-  get: 'GET',
-  post: 'POST',
-  put: 'PUT',
-  delete: 'DELETE',
-  patch: 'PATCH'
-})
+  get: "GET",
+  post: "POST",
+  put: "PUT",
+  delete: "DELETE",
+  patch: "PATCH",
+});

@@ -1,2 +1,2 @@
 // file: src/store/root/index.ts
-export * from './Root.store'
+export * from "./Root.store";

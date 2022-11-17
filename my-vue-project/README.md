@@ -1,19 +1,28 @@
-# Vue 3 + TypeScript + Vite
+# my-vue-project
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Companion project for the book.
 
-## Notes
-Before trying to run this project, open the my-component-library project and build that one first.
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
-
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
-
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+    "@builtwithjavascript/formatters": "^1.0.5",
+    "@largescaleapps/my-js-helpers": "^0.1.21",
+    "@testing-library/user-event": "^14.4.3",
+    "@testing-library/vue": "^6.6.1",
+    "@types/node": "^18.7.18",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "autoprefixer": "^10.4.7",
+    "axios": "^0.27.2",
+    "husky": "^7.0.4",
+    "i18next": "^21.7.1",
+    "jsdom": "^19.0.0",
+    "json-server": "^0.17.0",
+    "my-component-library": "file:../my-component-library",
+    "postcss": "^8.4.13",
+    "prettier": "^2.6.2",
+    "pretty-quick": "^3.1.3",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.8.3",
+    "vite": "^3.0.2",
+    "vitest": "^0.10.2",
+    "vue-i18n": "^9.1.10",
+    "vue-tsc": "^0.40.13"
+    "vue

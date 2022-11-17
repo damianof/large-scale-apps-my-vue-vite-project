@@ -22,26 +22,27 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
-  import { useLocalization } from '@/localization/useLocalization'
+import { defineComponent } from "vue";
+import { useLocalization } from "@/localization/useLocalization";
 
-  export default defineComponent({
-    name: 'LocaleSelector',
-    setup() {
-      const { t, locales, currentLocale, isLoadingLocale, changeLocale } = useLocalization()
+export default defineComponent({
+  name: "LocaleSelector",
+  setup() {
+    const { t, locales, currentLocale, isLoadingLocale, changeLocale } =
+      useLocalization();
 
-      // an event handler from cahnging the locale
-      const onLocaleClick = (lcid: string) => {
-        changeLocale(lcid)
-      }
+    // an event handler from cahnging the locale
+    const onLocaleClick = (lcid: string) => {
+      changeLocale(lcid);
+    };
 
-      return {
-        t,
-        locales,
-        currentLocale,
-        isLoadingLocale,
-        onLocaleClick
-      }
-    }
-  })
+    return {
+      t,
+      locales,
+      currentLocale,
+      isLoadingLocale,
+      onLocaleClick,
+    };
+  },
+});
 </script>

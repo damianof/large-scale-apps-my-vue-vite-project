@@ -6,51 +6,51 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
-  export default defineComponent({
-    name: 'ElLoader',
-    props: {
-      show: {
-        type: Boolean
-      }
-    }
-  })
+export default defineComponent({
+  name: "ElLoader",
+  props: {
+    show: {
+      type: Boolean,
+    },
+  },
+});
 </script>
 
 <style>
-  .loader {
-    display: inline-block;
+.loader {
+  display: inline-block;
+}
+.loader .bounceball {
+  position: relative;
+  width: 30px;
+}
+.loader .bounceball:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ff3e00;
+  transform-origin: 50%;
+  animation: bounce 500ms alternate infinite ease;
+}
+@keyframes bounce {
+  0% {
+    top: 60px;
+    height: 10px;
+    border-radius: 60px 60px 20px 20px;
+    transform: scaleX(2);
   }
-  .loader .bounceball {
-    position: relative;
-    width: 30px;
-  }
-  .loader .bounceball:before {
-    position: absolute;
-    content: '';
-    top: 0;
-    width: 30px;
-    height: 30px;
+  25% {
+    height: 60px;
     border-radius: 50%;
-    background-color: #ff3e00;
-    transform-origin: 50%;
-    animation: bounce 500ms alternate infinite ease;
+    transform: scaleX(1);
   }
-  @keyframes bounce {
-    0% {
-      top: 60px;
-      height: 10px;
-      border-radius: 60px 60px 20px 20px;
-      transform: scaleX(2);
-    }
-    25% {
-      height: 60px;
-      border-radius: 50%;
-      transform: scaleX(1);
-    }
-    100% {
-      top: 0;
-    }
+  100% {
+    top: 0;
   }
+}
 </style>

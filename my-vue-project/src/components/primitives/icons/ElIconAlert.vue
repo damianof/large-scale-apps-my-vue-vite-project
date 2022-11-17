@@ -1,23 +1,23 @@
 <script setup lang="ts">
-  import { computed } from 'vue'
+import { computed } from "vue";
 
-  interface Props {
-    testid?: string
-    addCss?: string
+interface Props {
+  testid?: string;
+  addCss?: string;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  testid: "not-set",
+  addCss: "",
+});
+
+const cssClass = computed(() => {
+  const result = ["h-6 w-6 "];
+  if ((props.addCss || "").trim().length > 0) {
+    result.push(props.addCss);
   }
-
-  const props = withDefaults(defineProps<Props>(), {
-    testid: 'not-set',
-    addCss: ''
-  })
-
-  const cssClass = computed(() => {
-    const result = ['h-6 w-6 ']
-    if ((props.addCss || '').trim().length > 0) {
-      result.push(props.addCss)
-    }
-    return result.join(' ').trim()
-  })
+  return result.join(" ").trim();
+});
 </script>
 
 <template>

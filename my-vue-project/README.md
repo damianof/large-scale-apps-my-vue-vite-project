@@ -1,28 +1,3 @@
 # my-vue-project
 
 Companion project for the book.
-
-
-    "@builtwithjavascript/formatters": "^1.0.5",
-    "@largescaleapps/my-js-helpers": "^0.1.21",
-    "@testing-library/user-event": "^14.4.3",
-    "@testing-library/vue": "^6.6.1",
-    "@types/node": "^18.7.18",
-    "@vitejs/plugin-vue": "^3.1.0",
-    "autoprefixer": "^10.4.7",
-    "axios": "^0.27.2",
-    "husky": "^7.0.4",
-    "i18next": "^21.7.1",
-    "jsdom": "^19.0.0",
-    "json-server": "^0.17.0",
-    "my-component-library": "file:../my-component-library",
-    "postcss": "^8.4.13",
-    "prettier": "^2.6.2",
-    "pretty-quick": "^3.1.3",
-    "tailwindcss": "^3.0.24",
-    "typescript": "^4.8.3",
-    "vite": "^3.0.2",
-    "vitest": "^0.10.2",
-    "vue-i18n": "^9.1.10",
-    "vue-tsc": "^0.40.13"
-    "vue

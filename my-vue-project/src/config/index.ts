@@ -15,7 +15,7 @@ console.log(`------ env ---- "${getAppConfigKey()}"`);
 
 if (!configFilesMap.has(getAppConfigKey())) {
   throw Error(
-    `Could not find config for VITE_APP_CONFIG key "${getAppConfigKey()}"`
+    `Could not find config for VITE_APP_CONFIG key "${getAppConfigKey()}"`,
   );
 }
 

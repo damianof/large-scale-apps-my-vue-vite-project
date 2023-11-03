@@ -32,7 +32,7 @@ export class LocalizationApiClientModel
 
   fetchTranslation(
     namespace: string,
-    key: string
+    key: string,
   ): Promise<{ [key: string]: string }> {
     const requestParameters: HttpRequestParamsInterface = {
       requestType: HttpRequestType.get,
@@ -46,7 +46,7 @@ export class LocalizationApiClientModel
     };
 
     return useHttpClient().request<{ [key: string]: string }>(
-      requestParameters
+      requestParameters,
     );
   }
 }

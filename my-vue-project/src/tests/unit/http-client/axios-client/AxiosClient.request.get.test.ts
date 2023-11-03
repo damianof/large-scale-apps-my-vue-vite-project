@@ -17,20 +17,18 @@ describe("HttpClient: axios-client: request: get", () => {
   const httpClient = new HttpClientAxios();
 
   it("should execute get request succesfully", () => {
-    vitest
-      .spyOn(axios, "get")
-      .mockImplementation(async () =>
-        Promise.resolve({
-          data: `request completed: ${mockRequestParams.endpoint}`,
-        })
-      );
+    vitest.spyOn(axios, "get").mockImplementation(async () =>
+      Promise.resolve({
+        data: `request completed: ${mockRequestParams.endpoint}`,
+      }),
+    );
 
     httpClient
       .request(mockRequestParams)
       .then((response) => {
         //console.debug('response:', response)
         expect(response).toEqual(
-          `request completed: ${mockRequestParams.endpoint}`
+          `request completed: ${mockRequestParams.endpoint}`,
         );
       })
       .catch((error) => {
@@ -39,13 +37,11 @@ describe("HttpClient: axios-client: request: get", () => {
   });
 
   it("get should throw error on rejection", () => {
-    vitest
-      .spyOn(axios, "get")
-      .mockImplementation(async () =>
-        Promise.reject({
-          data: `request completed: ${mockRequestParams.endpoint}`,
-        })
-      );
+    vitest.spyOn(axios, "get").mockImplementation(async () =>
+      Promise.reject({
+        data: `request completed: ${mockRequestParams.endpoint}`,
+      }),
+    );
 
     httpClient.request(mockRequestParams).catch((error) => {
       expect(error).toBeDefined();

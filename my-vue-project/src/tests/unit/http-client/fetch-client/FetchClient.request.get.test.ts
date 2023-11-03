@@ -30,7 +30,7 @@ describe("HttpClient: axios-client: request: get", (done) => {
       Promise.resolve({
         redirected: false,
         json: () => Promise.resolve(expectedResult),
-      } as any)
+      } as any),
     );
 
     try {

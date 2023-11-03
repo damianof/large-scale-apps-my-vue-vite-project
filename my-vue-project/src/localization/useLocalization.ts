@@ -66,7 +66,7 @@ const changeLocale = async (lcid: string) => {
     // retrieve data from API end point (or CDN etc)
     const localeData = await apiClient.localization.fetchTranslation(
       "translation",
-      lcid
+      lcid,
     );
     // use the data returned y the API and pass it toi18n setLocaleMessage
     i18n.global.setLocaleMessage(lcid, localeData);
@@ -80,7 +80,7 @@ const changeLocale = async (lcid: string) => {
     if (localStorageConfig.enabled) {
       // calculate new expiration date
       const expiresAt = dt.setMinutes(
-        dt.getMinutes() + Number(localStorageConfig.expirationInMinutes)
+        dt.getMinutes() + Number(localStorageConfig.expirationInMinutes),
       );
       // update local storage
       localStorage.setItem(
@@ -89,7 +89,7 @@ const changeLocale = async (lcid: string) => {
           appVersion: config.global.version,
           expiresAt: expiresAt,
           json: localeData,
-        })
+        }),
       );
     }
   }

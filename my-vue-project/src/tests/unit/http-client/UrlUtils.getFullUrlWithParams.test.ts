@@ -26,7 +26,7 @@ describe("UrlUtils: getFullUrlWithParams", () => {
     const result = UrlUtils.getFullUrlWithParams(endpoint, params);
 
     expect("https://unit-test-api/v1/domain/USA/NY/gtref345ytr").toEqual(
-      result
+      result,
     );
   });
 });

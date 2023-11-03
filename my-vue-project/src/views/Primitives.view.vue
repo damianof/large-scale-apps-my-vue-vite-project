@@ -40,7 +40,7 @@ const onOpenDialogClicked = async (id: string) => {
     // the result will be true if the user click on COnfirm, or false if click on Cancel
     console.log(
       "----- PrimitivesView: onButtonClicked: modal-1 prompt result",
-      result
+      result,
     );
   } else if (id === "open-modal-2") {
     // here we invoke our useModal with the custom labels for the buttons
@@ -54,7 +54,7 @@ const onOpenDialogClicked = async (id: string) => {
     // the result will be true if the user click on COnfirm, or false if click on Cancel
     console.log(
       "----- PrimitivesView: onButtonClicked: modal-2 prompt result",
-      result
+      result,
     );
   }
 };
@@ -82,12 +82,12 @@ const onToggleClicked = (id: string) => {
       <ElText
         tag="h2"
         addCss="text-red-500"
-        text="Here ElText will render a &lth2&gt element"
+        text="Here ElText will render a <h2> element"
       />
       <ElText
         tag="p"
         addCss="text-red-700"
-        text="Here ElText will render a &ltp&gt element"
+        text="Here ElText will render a <p> element"
       />
     </div>
 

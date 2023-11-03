@@ -12,7 +12,7 @@ import {
 // create an instance of our main ApiClient that wraps the live child clients
 const apiLiveClient: ApiClientInterface = {
   localization: new LocalizationApiClientModel(
-    config.localization.apiClientOptions
+    config.localization.apiClientOptions,
   ),
   items: new ItemsApiClientModel(config.items.apiClientOptions),
 };

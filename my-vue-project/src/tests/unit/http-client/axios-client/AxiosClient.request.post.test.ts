@@ -20,20 +20,18 @@ describe("HttpClient: axios-client: request: post", () => {
   const httpClient = new HttpClientAxios();
 
   it("should execute post request succesfully", () => {
-    vitest
-      .spyOn(axios, "post")
-      .mockImplementation(async () =>
-        Promise.resolve({
-          data: `request completed: ${mockRequestParams.endpoint}`,
-        })
-      );
+    vitest.spyOn(axios, "post").mockImplementation(async () =>
+      Promise.resolve({
+        data: `request completed: ${mockRequestParams.endpoint}`,
+      }),
+    );
 
     httpClient
       .request<string, P>(mockRequestParams)
       .then((response) => {
         //console.debug('response:', response)
         expect(response).toEqual(
-          `request completed: ${mockRequestParams.endpoint}`
+          `request completed: ${mockRequestParams.endpoint}`,
         );
       })
       .catch((error) => {

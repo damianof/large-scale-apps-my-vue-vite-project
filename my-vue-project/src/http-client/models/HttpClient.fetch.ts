@@ -32,7 +32,7 @@ export class HttpClientFetch implements HttpClientInterface {
    * @returns A Promise<R> as the implementation of this method will be async.
    */
   async request<R, P = void>(
-    parameters: HttpRequestParamsInterface<P>
+    parameters: HttpRequestParamsInterface<P>,
   ): Promise<R> {
     // use destructuring to extract our parameters into local variables
     const {
@@ -152,7 +152,7 @@ export class HttpClientFetch implements HttpClientInterface {
 
         default: {
           console.warn(
-            "HttpClientFetch: invalid requestType argument or request type not implemented"
+            "HttpClientFetch: invalid requestType argument or request type not implemented",
           );
         }
       }

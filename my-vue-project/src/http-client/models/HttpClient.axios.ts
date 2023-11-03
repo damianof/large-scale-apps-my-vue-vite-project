@@ -106,7 +106,7 @@ export class HttpClientAxios implements HttpClientInterface {
 
         default: {
           console.warn(
-            "HttpClientAxios: invalid requestType argument or request type not implemented"
+            "HttpClientAxios: invalid requestType argument or request type not implemented",
           );
         }
       }

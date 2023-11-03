@@ -3,11 +3,11 @@
   "version": "0.1.5",
   "type": "module",
   "scripts": {
-    "clean": "rm -rf ./dist; rm -rf my-js-helpers-0.1.2.tgz; rm -rf ../my-js-helpers-0.1.2.tgz",
+    "clean": "rm -rf ./dist; rm -rf my-js-helpers-0.1.5.tgz; rm -rf ../my-js-helpers-0.1.5.tgz",
     "build-types": "tsc --declaration --emitDeclarationOnly --outDir ./dist",
     "build-lib": "vite build",
     "build": "npm run clean && npm run build-lib && npm run build-types",
-    "pack": "npm pack; mv my-js-helpers-0.1.2.tgz ../my-js-helpers-0.1.2.tgz",
+    "pack": "npm pack; mv my-js-helpers-0.1.5.tgz ../my-js-helpers-0.1.5.tgz",
     "all": "npm run build && npm run pack",
     "pub": "npm publish --access public",
     "test": "vitest run",

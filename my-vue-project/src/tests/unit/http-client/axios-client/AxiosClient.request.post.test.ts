@@ -19,7 +19,7 @@ describe('HttpClient: axios-client: request: post', () => {
     vitest.spyOn(axios, 'post').mockImplementation(async () =>
       Promise.resolve({
         data: `request completed: ${mockRequestParams.endpoint}`
-      })
+      } as any)
     )
 
     httpClient

@@ -84,20 +84,20 @@ const onToggleClicked = (id: string) => {
     <div class="p-6 border">
       <ElToggle
         id="toggle-a"
-        :checked="state.toggles.find((item) => item.id === 'toggle-a').checked"
+        :checked="state.toggles.find((item) => item.id === 'toggle-a')?.checked"
         :disabled="false"
         @clicked="onToggleClicked"
       />
       <ElToggle
         id="toggle-b"
-        :checked="state.toggles.find((item) => item.id === 'toggle-b').checked"
+        :checked="state.toggles.find((item) => item.id === 'toggle-b')?.checked"
         :disabled="true"
         addCss="ml-2"
         @clicked="onToggleClicked"
       />
       <ElToggle
         id="toggle-c"
-        :checked="state.toggles.find((item) => item.id === 'toggle-c').checked"
+        :checked="state.toggles.find((item) => item.id === 'toggle-c')?.checked"
         :disabled="false"
         addCss="ml-2"
         @clicked="onToggleClicked"

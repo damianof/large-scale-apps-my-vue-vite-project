@@ -16,6 +16,9 @@
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "my-component-library": [
+        "../my-component-library/dist"
       ]
     },
     "types": [

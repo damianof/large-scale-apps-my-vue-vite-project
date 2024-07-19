@@ -1,34 +1,26 @@
 {
   "name": "@largescaleapps/my-js-helpers",
-  "version": "0.1.5",
+  "version": "0.1.9",
   "type": "module",
   "scripts": {
-    "clean": "rm -rf ./dist; rm -rf my-js-helpers-0.1.5.tgz; rm -rf ../my-js-helpers-0.1.5.tgz",
+    "clean": "rm -rf ./dist; rm -rf my-js-helpers.tgz; rm -rf ../my-js-helpers.tgz",
     "build-types": "tsc --declaration --emitDeclarationOnly --outDir ./dist",
     "build-lib": "vite build",
     "build": "npm run clean && npm run build-lib && npm run build-types",
-    "pack": "npm pack; mv my-js-helpers-0.1.5.tgz ../my-js-helpers-0.1.5.tgz",
-    "all": "npm run build && npm run pack",
+    "pack": "npm pack; mv my-js-helpers.tgz ../my-js-helpers.tgz",
+    "all": "npm run build",
     "pub": "npm publish --access public",
     "test": "vitest run",
     "test-watch": "vitest watch",
     "pretty": "prettier -w \"./src/**/*.ts\"",
     "preversion": "npm run clean",
     "version": "npm run build",
-    "postversion": "npm run pack",
     "version-patch": "npm version patch -m \"Patch version\""
-  },
-  "devDependencies": {
-    "@types/jest": "^29.5.7",
-    "jsdom": "^22.1.0",
-    "typescript": "^5.2.2",
-    "vite": "^4.5.0",
-    "vitest": "^0.34.6"
   },
   "files": [
     "dist"
   ],
-  "types": "./dist/src/index.d.ts",
+  "types": "./dist/index.d.ts",
   "main": "./dist/my-js-helpers.umd.js",
   "module": "./dist/my-js-helpers.es.js",
   "exports": {
@@ -39,5 +31,12 @@
       "require": "./dist/my-js-helpers.umd.js"
     },
     "./package.json": "./package.json"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jsdom": "^24.1.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4",
+    "vitest": "^2.0.3"
   }
 }

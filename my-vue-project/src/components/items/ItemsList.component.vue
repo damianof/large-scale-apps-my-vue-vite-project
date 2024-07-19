@@ -1,27 +1,26 @@
-// file: src/components/items/ItemsList.component.vue
 <script setup lang="ts">
 // import a reference to our ItemInterace
-import type { ItemInterface } from "@/models";
+import type { ItemInterface } from '@/models'
 // import a reference to the Item component:
-import ItemComponent from "./children/Item.component.vue";
+import ItemComponent from './children/Item.component.vue'
 // import a reference to the Laoder component
-import Loader from "@/components/shared/Loader.component.vue";
+import Loader from '@/components/shared/Loader.component.vue'
 
 // expose our properties
 defineProps<{
-  items: ItemInterface[];
-  loading: boolean;
-}>();
+  items: ItemInterface[]
+  loading: boolean
+}>()
 
 // define emits for custom events
 const emit = defineEmits<{
-  (e: "selectItem", id: number): any;
-}>();
+  (e: 'selectItem', id: number): any
+}>()
 
 // selectItem handler
 const onSelectItem = (id: number) => {
-  emit("selectItem", id);
-};
+  emit('selectItem', id)
+}
 </script>
 
 <template>

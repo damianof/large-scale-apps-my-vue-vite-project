@@ -1,6 +1,6 @@
 // file: src/api-client/models/items/ItemsApiClient.interface.ts
 
-import { ItemInterface } from "../../../models/items/Item.interface";
+import { ItemInterface } from '../../../models/items/Item.interface'
 
 /**
  * @Name ItemsApiClientInterface
@@ -8,5 +8,5 @@ import { ItemInterface } from "../../../models/items/Item.interface";
  * Interface for the Items api client module
  */
 export interface ItemsApiClientInterface {
-  fetchItems: () => Promise<ItemInterface[]>;
+  fetchItems: () => Promise<ItemInterface[]>
 }

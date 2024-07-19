@@ -26,13 +26,11 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
-    },
+    }
   },
   test: {
     globals: true,
     environment: 'jsdom',
-    exclude: [
-      'node_modules'
-    ]
+    exclude: ['node_modules']
   }
 })

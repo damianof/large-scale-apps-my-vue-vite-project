@@ -16,7 +16,8 @@
     "test": "vitest run --config vite.config.mock.ts --mode mock",
     "test-watch": "vitest watch --config vite.config.mock.ts --mode mock",
     "test-coverage": "vitest run --coverage --config vite.config.mock.ts --mode mock",
-    "pretty": "prettier -w \"./src/**/*.*{ts,vue,svelte,tsx,css,scss,html}\"",
+    "pretty:watch": "npx onchange \"**/*.*{ts,vue,svelte,tsx,css,scss,html}\" -- npx prettier --write --ignore-unknown {{changed}}",
+    "pretty": "npx prettier --config .prettierrc --loglevel warn -w \"./**/*.*{ts,vue,svelte,tsx,css,scss,html}\"",
     "check": "npm run pretty; npm run test; npm run build-mock"
   },
   "husky": {
@@ -38,6 +39,7 @@
     "jsdom": "^22.1.0",
     "json-server": "^0.17.4",
     "my-component-library": "file:../my-component-library",
+    "onchange": "^7.1.0",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "pretty-quick": "^3.1.3",

@@ -1,1 +1,1 @@
-export * from "./Item.interface";
+export * from './Item.interface'

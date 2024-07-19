@@ -1,14 +1,14 @@
 // text
-import ElText from "./text/ElText.vue";
+import ElText from './text/ElText.vue'
 
 // buttons
-import ElButton from "./buttons/ElButton.vue";
+import ElButton from './buttons/ElButton.vue'
 
 // toggles
-import ElToggle from "./toggles/ElToggle.vue";
+import ElToggle from './toggles/ElToggle.vue'
 
 // modals
-import { useModalDialog } from "./modals/useModalDialog";
+import { useModalDialog } from './modals/useModalDialog'
 
 export {
   // text
@@ -18,8 +18,8 @@ export {
   // toggles
   ElToggle,
   // moals
-  useModalDialog,
-};
+  useModalDialog
+}
 
 // icons
-export * from "./icons";
+export * from './icons'

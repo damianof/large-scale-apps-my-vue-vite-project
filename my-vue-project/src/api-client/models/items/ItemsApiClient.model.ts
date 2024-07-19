@@ -1,17 +1,10 @@
 // file: src/api-client/models/items/ItemsApiClient.model.ts
 
-import {
-  useHttpClient,
-  HttpRequestParamsInterface,
-  HttpRequestType,
-} from "@/http-client";
+import { useHttpClient, HttpRequestParamsInterface, HttpRequestType } from '@/http-client'
 
-import {
-  ItemsApiClientOptions,
-  ItemsApiClientEndpoints,
-} from "./ItemsApiClientOptions.interface";
-import { ItemsApiClientInterface } from "./ItemsApiClient.interface";
-import { ItemInterface } from "@/models";
+import { ItemsApiClientOptions, ItemsApiClientEndpoints } from './ItemsApiClientOptions.interface'
+import { ItemsApiClientInterface } from './ItemsApiClient.interface'
+import { ItemInterface } from '@/models'
 
 /**
  * @Name ItemsApiClientModel
@@ -19,13 +12,13 @@ import { ItemInterface } from "@/models";
  * Implements the ItemsApiClientInterface interface
  */
 export class ItemsApiClientModel implements ItemsApiClientInterface {
-  private readonly endpoints!: ItemsApiClientEndpoints;
-  private readonly mockDelay: number = 0;
+  private readonly endpoints!: ItemsApiClientEndpoints
+  private readonly mockDelay: number = 0
 
   constructor(options: ItemsApiClientOptions) {
-    this.endpoints = options.endpoints;
+    this.endpoints = options.endpoints
     if (options.mockDelay) {
-      this.mockDelay = options.mockDelay;
+      this.mockDelay = options.mockDelay
     }
   }
 
@@ -34,9 +27,9 @@ export class ItemsApiClientModel implements ItemsApiClientInterface {
       requestType: HttpRequestType.get,
       endpoint: this.endpoints.fetchItems,
       requiresToken: false,
-      mockDelay: this.mockDelay,
-    };
+      mockDelay: this.mockDelay
+    }
 
-    return useHttpClient().request<ItemInterface[]>(requestParameters);
+    return useHttpClient().request<ItemInterface[]>(requestParameters)
   }
 }

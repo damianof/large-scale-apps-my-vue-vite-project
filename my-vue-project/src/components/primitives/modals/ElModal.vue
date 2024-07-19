@@ -1,42 +1,42 @@
 <script setup lang="ts">
-import { ref, defineComponent } from "vue";
-import ElButton from "../buttons/ElButton.vue";
+import { ref, defineComponent } from 'vue'
+import ElButton from '../buttons/ElButton.vue'
 
 interface ModalProps {
-  testid?: string;
-  title: string;
-  message?: string;
-  cancelLabel?: string;
-  confirmLabel?: string;
-  primaryButtonType?: string;
-  icon?: ReturnType<typeof defineComponent>;
-  iconAddCss?: string;
-  resolve: (value: boolean | PromiseLike<boolean>) => void;
+  testid?: string
+  title: string
+  message?: string
+  cancelLabel?: string
+  confirmLabel?: string
+  primaryButtonType?: string
+  icon?: ReturnType<typeof defineComponent>
+  iconAddCss?: string
+  resolve: (value: boolean | PromiseLike<boolean>) => void
 }
 
 const props = withDefaults(defineProps<ModalProps>(), {
-  testid: "not-set",
-  message: "",
-  cancelLabel: "Cancel",
-  confirmLabel: "Confirm?",
-  primaryButtonType: "primary",
-});
+  testid: 'not-set',
+  message: '',
+  cancelLabel: 'Cancel',
+  confirmLabel: 'Confirm?',
+  primaryButtonType: 'primary'
+})
 
-const isVisible = ref(true);
+const isVisible = ref(true)
 
 const close = async () => {
-  isVisible.value = false;
-};
+  isVisible.value = false
+}
 
 const confirm = async () => {
-  await close();
-  await props.resolve(true);
-};
+  await close()
+  await props.resolve(true)
+}
 
 const discard = async () => {
-  await close();
-  await props.resolve(false);
-};
+  await close()
+  await props.resolve(false)
+}
 </script>
 
 <template>
@@ -47,16 +47,10 @@ const discard = async () => {
     aria-modale="true"
     :aria-labelledby="title"
   >
-    <div
-      class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
-    >
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
       <!-- Background overlay -->
       <div class="fixed inset-0 bg-gray-400 bg-opacity-75" aria-hidden="true" />
-      <span
-        class="hidden sm:inline-block sm:align-middle sm:h-screen"
-        aria-hidden="true"
-        >&#8203;</span
-      >
+      <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
       <!--  Modal panel -->
       <div
         id="modal-panel"
@@ -78,22 +72,9 @@ const discard = async () => {
               <p class="text-sm text-gray-500">{{ props.message }}</p>
             </div>
           </div>
-          <div
-            id="button-continer"
-            class="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense"
-          >
-            <ElButton
-              id="btn-cancel"
-              :label="props.cancelLabel"
-              buttonType="secondary"
-              @clicked="discard"
-            />
-            <ElButton
-              id="btn-confirm"
-              :label="props.confirmLabel"
-              :buttonType="primaryButtonType"
-              @clicked="confirm"
-            />
+          <div id="button-continer" class="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense">
+            <ElButton id="btn-cancel" :label="props.cancelLabel" buttonType="secondary" @clicked="discard" />
+            <ElButton id="btn-confirm" :label="props.confirmLabel" :buttonType="primaryButtonType" @clicked="confirm" />
           </div>
         </div>
       </div>

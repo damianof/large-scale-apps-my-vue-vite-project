@@ -7,9 +7,7 @@ import { fileURLToPath, URL } from 'url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue()
-  ],
+  plugins: [vue()],
   server: {
     port: 3000,
     origin: 'http://localhost:3000',
@@ -19,17 +17,15 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
-    },
+    }
   },
   test: {
     globals: true,
     environment: 'jsdom',
-    exclude: [
-      'node_modules'
-    ]
+    exclude: ['node_modules']
   },
   define: {
     __VUE_I18N_LEGACY_API__: true,
-    __VUE_I18N_FULL_INSTALL__: true,
+    __VUE_I18N_FULL_INSTALL__: true
   }
 })

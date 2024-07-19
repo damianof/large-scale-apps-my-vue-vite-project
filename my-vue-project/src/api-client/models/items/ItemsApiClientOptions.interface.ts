@@ -6,7 +6,7 @@
  * Interface for the Items urls used to avoid hard-coded strings
  */
 export interface ItemsApiClientEndpoints {
-  fetchItems: string;
+  fetchItems: string
 }
 
 /**
@@ -15,6 +15,6 @@ export interface ItemsApiClientEndpoints {
  * Interface for the Items api client options (includes endpoints used to avoid hard-coded strings)
  */
 export interface ItemsApiClientOptions {
-  mockDelay?: number;
-  endpoints: ItemsApiClientEndpoints;
+  mockDelay?: number
+  endpoints: ItemsApiClientEndpoints
 }

@@ -7,20 +7,16 @@ import { fileURLToPath, URL } from 'url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue()
-  ],
+  plugins: [vue()],
   envDir: './src/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
-    },
+    }
   },
   test: {
     globals: true,
     environment: 'jsdom',
-    exclude: [
-      'node_modules'
-    ]
+    exclude: ['node_modules']
   }
 })

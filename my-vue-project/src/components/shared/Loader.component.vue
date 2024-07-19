@@ -6,16 +6,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: "ElLoader",
+  name: 'ElLoader',
   props: {
     show: {
-      type: Boolean,
-    },
-  },
-});
+      type: Boolean
+    }
+  }
+})
 </script>
 
 <style>
@@ -28,7 +28,7 @@ export default defineComponent({
 }
 .loader .bounceball:before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   width: 30px;
   height: 30px;

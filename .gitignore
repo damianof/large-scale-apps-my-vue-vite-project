@@ -23,3 +23,6 @@ pnpm-debug.log*
 *.sw?
 *.tgz
 OTHER-NOTES.md
+
+# Vite artifacts
+.Vite
